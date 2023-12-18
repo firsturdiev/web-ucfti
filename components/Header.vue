@@ -61,91 +61,94 @@
         <button class="menu-btn" @click="(event) => event.currentTarget.nextElementSibling.classList.add('menu--open')"></button>
 
         <div class="menu">
-          <div class="menu__inner">
-            <div class="menu__top">
-              <NuxtLink to="/" class="logo">
-                <img src="~/assets/img/logo-dark.svg" alt="Logo">
-              </NuxtLink>
+  <div class="menu__inner">
+    <div class="menu__top">
+      <a href="/" class="logo">
+        <img src="~/assets/img/logo-dark.svg" alt="Logo">
+      </a>
 
-              <button class="menu__back-btn" @click="(event) => event.currentTarget.closest('.menu').classList.remove('menu--open')"></button>
-            </div>
+      <button class="menu__back-btn"
+        @click="(event) => event.currentTarget.closest('.menu').classList.remove('menu--open')"></button>
+    </div>
 
-            <div class="menu__middle">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <NuxtLink to="/news" class="menu__link">News</NuxtLink>
-                </li>
-                <li class="menu__item">
-                  <button class="menu__link menu__link--menu" @click="(event) => event.currentTarget.classList.toggle('menu__link--open')">About us</button>
-                  <div class="menu__dropdown">
-                    <NuxtLink to="/about" class="menu__dropdown-link">About association</NuxtLink>
-                    <NuxtLink to="/goals" class="menu__dropdown-link">Goal and objectives</NuxtLink>
-                    <NuxtLink to="/report" class="menu__dropdown-link">Report</NuxtLink>
-                    <NuxtLink to="/management" class="menu__dropdown-link">Management</NuxtLink>
-                  </div>
-                </li>
-                <li class="menu__item">
-                  <NuxtLink to="#" class="menu__link">Services</NuxtLink>
-                </li>
-                <li class="menu__item">
-                  <NuxtLink to="/investors" class="menu__link">Prospective investors</NuxtLink>
-                </li>
-                <li class="menu__item">
-                  <NuxtLink to="/membership" class="menu__link">Membership</NuxtLink>
-                </li>
-              </ul>
-
-              <button class="menu__btn-lang" @click="(event) => event.currentTarget.classList.toggle('menu__btn-lang--open')">
-                <div class="menu__btn-lang__inner">
-                  <span>English</span>
-                  <svg class="menu__btn-lang__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none">
-                    <path d="M21.3332 13.3333L15.9998 18.6666L10.6665 13.3333" stroke="currentColor" stroke-width="2.4"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="menu__dropdown">
-                  <NuxtLink to="#" class="menu__dropdown-link">中国人</NuxtLink>
-                  <NuxtLink to="#" class="menu__dropdown-link">English</NuxtLink>
-                  <NuxtLink to="#" class="menu__dropdown-link">O'zbek</NuxtLink>
-                </div>
-              </button>
-            </div>
-
-            <div class="menu__bottom">
-              <ul class="socials">
-                <li class="socials__item">
-                  <NuxtLink to="#" class="socials__link">
-                    <img class="socials__icon" src="~/assets/img/icon-fb.svg">
-                  </NuxtLink>
-                </li>
-                <li class="socials__item">
-                  <NuxtLink to="#" class="socials__link">
-                    <img class="socials__icon" src="~/assets/img/icon-tg.svg">
-                  </NuxtLink>
-                </li>
-                <li class="socials__item">
-                  <NuxtLink to="#" class="socials__link">
-                    <img class="socials__icon" src="~/assets/img/icon-ig.svg">
-                  </NuxtLink>
-                </li>
-                <li class="socials__item">
-                  <NuxtLink to="#" class="socials__link">
-                    <img class="socials__icon" src="~/assets/img/icon-x.svg">
-                  </NuxtLink>
-                </li>
-              </ul>
-              <NuxtLink class="site-footer__phone" to="tel:+998903220888">90 322 08 88</NuxtLink>
-              <p class="site-footer__working-time">Monday-Friday 09:00 — 18:00<br>Lunch: 13:00 - 14:00</p>
-              <NuxtLink class="site-footer__location" to="https://maps.google.com">Bobur Street, 45, Tashkent, Uzbekistan</NuxtLink>
-            </div>
+    <div class="menu__middle">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="/news" class="menu__link">News</a>
+        </li>
+        <li class="menu__item">
+          <button class="menu__link menu__link--menu"
+            @click="(event) => event.currentTarget.classList.toggle('menu__link--open')">About us</button>
+          <div class="menu__dropdown">
+            <a href="/about" class="menu__dropdown-link">About association</a>
+              <a href="/goals" class="menu__dropdown-link">Goal and objectives</a>
+                <a href="/report" class="menu__dropdown-link">Report</a>
+                  <a href="/management" class="menu__dropdown-link">Management</a>
           </div>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Services</a>
+        </li>
+        <li class="menu__item">
+          <a href="/investors" class="menu__link">Prospective investors</a>
+        </li>
+        <li class="menu__item">
+          <a href="/membership" class="menu__link">Membership</a>
+        </li>
+      </ul>
 
-          <p class="copyright__title">When using and citing materials published on the <NuxtLink
-              to="/" target="_blank">ucfti.uz</NuxtLink>
-            website in
-            full or in part, a link is required</p>
+      <button class="menu__btn-lang" @click="(event) => event.currentTarget.classList.toggle('menu__btn-lang--open')">
+        <div class="menu__btn-lang__inner">
+          <span>English</span>
+          <svg class="menu__btn-lang__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 32 32" fill="none">
+            <path d="M21.3332 13.3333L15.9998 18.6666L10.6665 13.3333" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
         </div>
+        <div class="menu__dropdown">
+          <a href="#" class="menu__dropdown-link">中国人</a>
+            <a href="#" class="menu__dropdown-link">English</a>
+              <a href="#" class="menu__dropdown-link">O'zbek</a>
+        </div>
+      </button>
+    </div>
+
+    <div class="menu__bottom">
+      <ul class="socials">
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <img class="socials__icon" src="~/assets/img/icon-fb.svg">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <img class="socials__icon" src="~/assets/img/icon-tg.svg">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <img class="socials__icon" src="~/assets/img/icon-ig.svg">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <img class="socials__icon" src="~/assets/img/icon-x.svg">
+          </a>
+        </li>
+      </ul>
+      <a class="site-footer__phone" href="tel:+998903220888">90 322 08 88</a>
+      <p class="site-footer__working-time">Monday-Friday 09:00 — 18:00<br>Lunch: 13:00 - 14:00</p>
+      <a class="site-footer__location" href="https://maps.google.com" target="_blank">Bobur Street, 45, Tashkent, Uzbekistan
+      </a>
+    </div>
+  </div>
+
+  <p class="copyright__title">When using and citing materials published on the <a href="/" target="_blank">ucfti.uz
+    </a>
+    website in
+    full or in part, a link is required</p>
+</div>
       </div>
     </div>
   </header>
